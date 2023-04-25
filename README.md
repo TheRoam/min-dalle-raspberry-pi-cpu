@@ -27,12 +27,39 @@ Here's a more detailed breakdown of performance on an A100. Credit to [@technobi
 The flax model and code for converting it to torch can be found [here](https://github.com/kuprel/min-dalle-flax).
 
 ## Install
-
+**1. Clone repository:**
 ```bash
-$ pip install min-dalle
+$ git clone https://github.com/TheRoam/min-dalle-raspberry-pi-cpu
+```  
+*[you could also clone the original repository, but it doesn't have fixes for Raspberry Pi 4B]*
+
+**2. Create a python environment:**
+```bash
+$ cd min-dalle-raspberry-pi-cpu
+$ python -m venv mDalle
+$ source mDalle/bin/activate
+```  
+
+**3. Install min-dalle:**
+```bash
+(mDalle) $ pip install min-dalle
 ```  
 
 ## Usage
+**Straight to the point**
+
+Just run the code in the terminal, editing the text prompt:
+```bash
+$ python image_from_text.py --text='underwater life'
+```
+First run takes longer as it downloads several model files.
+
+Mega model can take up to 5 minutes in RPi 4B 4GB to generate 1 image.
+
+Add `--no-mega` to reduce time (slightly) and quality (plenty) *Not worth it...*
+
+
+**Full usage**
 
 Load the model parameters once and reuse the model to generate multiple images.
 
