@@ -69,7 +69,7 @@ Add `--no-mega` to reduce time (slightly) and quality (plenty) *Not worth it...*
 
 ***Upscale***
 ```bash
-python Real-ESRGAN/inference_realesrgan.py -n RealESRGAN_x4plus -i path/to/image.png
+python Real-ESRGAN/inference_realesrgan.py -n RealESRGAN_x4plus -i path/to/image.png --fp32
 ```
 
 **Full usage**
