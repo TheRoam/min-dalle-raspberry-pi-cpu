@@ -1,4 +1,6 @@
-# min(DALL·E)
+# min(DALL·E) - Raspberry Pi 4B 4GB CPU fork
+
+*Forked on April 2023 to work with CPU in Raspberry Pi 4B 4GB*
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kuprel/min-dalle/blob/main/min_dalle.ipynb)
 &nbsp;
