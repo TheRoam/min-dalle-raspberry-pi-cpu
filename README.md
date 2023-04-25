@@ -29,20 +29,27 @@ The flax model and code for converting it to torch can be found [here](https://g
 ## Install
 **1. Clone repository:**
 ```bash
-$ git clone https://github.com/TheRoam/min-dalle-raspberry-pi-cpu
+git clone https://github.com/TheRoam/min-dalle-raspberry-pi-cpu
 ```  
 *[you could also clone the original repository, but it doesn't have fixes for Raspberry Pi 4B]*
 
 **2. Create a python environment:**
 ```bash
-$ cd min-dalle-raspberry-pi-cpu
-$ python -m venv mDalle
-$ source mDalle/bin/activate
+cd min-dalle-raspberry-pi-cpu
+python -m venv mDalle
+source mDalle/bin/activate
 ```  
 
 **3. Install min-dalle:**
 ```bash
-(mDalle) $ pip install min-dalle
+python setup.py install
+```  
+
+**5. Install Real-ESRGAN upscaler:**
+```bash
+git clone https://github.com/xinntao/Real-ESRGAN
+pip install cython basicsr facexlib gfpgan torch==1.11 torchvision==0.12.0
+python setup.py develop
 ```  
 
 ## Usage
@@ -58,6 +65,8 @@ Mega model can take up to 5 minutes in RPi 4B 4GB to generate 1 image.
 
 Add `--no-mega` to reduce time (slightly) and quality (plenty) *Not worth it...*
 
+***Upscale***
+python Real-ESRGAN/inference_realesrgan.py -n RealESRGAN_x4plus -i *.png
 
 **Full usage**
 
