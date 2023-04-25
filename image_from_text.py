@@ -3,6 +3,9 @@ import os
 from PIL import Image
 from min_dalle import MinDalle
 import torch
+import datetime
+x=datetime.datetime.now()
+date=str(x.year*100000000+x.month*1000000+x.day*10000+x.hour*100+x.minute)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--mega', action='store_true')
@@ -61,7 +64,7 @@ def generate_image(
         is_verbose=True
     )
     #save_image(image, image_path)
-    save_image(image, text)
+    save_image(image, date+"_"+text)
     print(ascii_from_image(image, size=128))
 
 
