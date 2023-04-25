@@ -48,7 +48,9 @@ python setup.py install
 **5. Install Real-ESRGAN upscaler:**
 ```bash
 git clone https://github.com/xinntao/Real-ESRGAN
-pip install cython basicsr facexlib gfpgan torch==1.11 torchvision==0.12.0
+pip install cython basicsr torch==1.11 torchvision==0.12.0
+cd Real-ESRGAN
+pip install -r requirements.txt
 python setup.py develop
 ```  
 
@@ -66,7 +68,9 @@ Mega model can take up to 5 minutes in RPi 4B 4GB to generate 1 image.
 Add `--no-mega` to reduce time (slightly) and quality (plenty) *Not worth it...*
 
 ***Upscale***
-python Real-ESRGAN/inference_realesrgan.py -n RealESRGAN_x4plus -i *.png
+```bash
+python Real-ESRGAN/inference_realesrgan.py -n RealESRGAN_x4plus -i path/to/image.png
+```
 
 **Full usage**
 
