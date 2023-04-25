@@ -33,8 +33,8 @@ def save_image(image: Image.Image, path: str):
         path = os.path.join(path, 'generated.png')
     elif not path.endswith('.png'):
         path += '.png'
-    print("saving image to", path)
-    image.save(path)
+    print("saving image to", "./images/"+path)
+    image.save("./images/"+path)
     return image
 
 
