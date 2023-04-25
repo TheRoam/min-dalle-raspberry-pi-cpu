@@ -45,7 +45,7 @@ source mDalle/bin/activate
 python setup.py install
 ```  
 
-**5. Install Real-ESRGAN upscaler:**
+**4. Install Real-ESRGAN upscaler:**
 ```bash
 git clone https://github.com/xinntao/Real-ESRGAN
 pip install cython basicsr torch==1.11 torchvision==0.12.0
