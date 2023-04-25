@@ -60,7 +60,8 @@ def generate_image(
         top_k=top_k, 
         is_verbose=True
     )
-    save_image(image, image_path)
+    #save_image(image, image_path)
+    save_image(image, text)
     print(ascii_from_image(image, size=128))
 
 
