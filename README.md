@@ -48,7 +48,7 @@ python setup.py install
 **4. Install Real-ESRGAN upscaler:**
 ```bash
 git clone https://github.com/xinntao/Real-ESRGAN
-pip install cython basicsr torch==1.11 torchvision==0.12.0 scipy==1.9 numpy==1.21.1
+pip install cython basicsr torch==1.11 torchvision==0.12.0 scipy==1.9 numpy==1.22
 cd Real-ESRGAN
 pip install -r requirements.txt
 python setup.py develop
@@ -59,7 +59,7 @@ python setup.py develop
 
 Just run the code in the terminal, editing the text prompt:
 ```bash
-$ python image_from_text.py --text='underwater life'
+python image_from_text.py --text='underwater life'
 ```
 First run takes longer as it downloads several model files.
 
@@ -69,8 +69,9 @@ Add `--no-mega` to reduce time (slightly) and quality (plenty) *Not worth it...*
 
 ***Upscale***
 ```bash
-python Real-ESRGAN/inference_realesrgan.py -n RealESRGAN_x4plus -i path/to/image.png --fp32
+python Real-ESRGAN/inference_realesrgan.py -n RealESRGAN_x4plus -i path/to/image.png --fp32 --tile 128
 ```
+*[the above command is optimized to work on Raspberry Pi via CPU only, splitting the algorithm in 128px tiles (4)]*
 
 **Full usage**
 
