@@ -48,7 +48,7 @@ python setup.py install
 **4. Install Real-ESRGAN upscaler:**
 ```bash
 git clone https://github.com/xinntao/Real-ESRGAN
-pip install cython basicsr torch==1.11 torchvision==0.12.0
+pip install cython basicsr torch==1.11 torchvision==0.12.0 scipy==1.9 numpy==1.21.1
 cd Real-ESRGAN
 pip install -r requirements.txt
 python setup.py develop
